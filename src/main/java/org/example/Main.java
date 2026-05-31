@@ -8,19 +8,19 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) {
 
-//        walkable w = ((steps, isEnabled) -> {
-//            System.out.println("Walking in the street");
-//            return 2*steps;
-//        });
+        walkable w = ((steps, isEnabled) -> {
+            System.out.println("Walking in the street");
+            return 2*steps;
+        });
+
+        w.walk(2,true);
+
+        walkable w2 = (steps, isEnabled) -> 2;
+
+//        List<String> fruits = List.of("Apple", "Kiwi", "Banana");
+//        Stream<String> s = fruits.stream();
 //
-//        w.walk(2,true);
-
-//        walkable w2 = (steps, isEnabled) -> 2;
-
-        List<String> fruits = List.of("Apple", "Kiwi", "Banana");
-        Stream<String> s = fruits.stream();
-
-        s.sorted().map(f -> f.length()).forEach(f -> System.out.println(f));
+//        s.sorted().map(f -> f.length()).forEach(f -> System.out.println(f));
     }
 }
 
