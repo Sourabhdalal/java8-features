@@ -1,6 +1,8 @@
 package org.example;
 
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -17,10 +19,13 @@ public class Main {
 
         walkable w2 = (steps, isEnabled) -> 2;
 
-//        List<String> fruits = List.of("Apple", "Kiwi", "Banana");
+        List<String> fruits = List.of("Apple", "Kiwi", "Banana");
 //        Stream<String> s = fruits.stream();
 //
 //        s.sorted().map(f -> f.length()).forEach(f -> System.out.println(f));
+
+         Set<String> stream = fruits.stream().collect(Collectors.toSet());
+         System.out.println(stream);
     }
 }
 
